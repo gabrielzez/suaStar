@@ -10,7 +10,7 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow: hidden; /* Ocultar rolagem do corpo */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,22 +29,53 @@
             transform: translate(-50%, -50%);
         }
 
-        .content {
+        /* Contêiner de conteúdo */
+        .scroll-container {
             position: relative;
             z-index: 1;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.8); /* Fundo mais escuro para contraste */
+            padding: 15px;
             border-radius: 10px;
-            max-width: 600px;
+            max-width: 90%; /* Usar 90% da largura da tela */
+            height: 90vh; /* Definir altura para 90% da altura da tela */
+            overflow-y: scroll; /* Rolagem vertical */
             text-align: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+        }
+
+        /* Ocultar barra de rolagem */
+        .scroll-container::-webkit-scrollbar {
+            display: none; /* Para navegadores baseados em WebKit */
+        }
+        .scroll-container {
+            scrollbar-width: none; /* Para Firefox */
         }
 
         h1 {
             color: #ffd700;
+            font-size: 24px; /* Tamanho do título */
+            margin: 0 0 10px 0; /* Margem entre o título e o conteúdo */
         }
 
         p {
-            font-size: 18px;
+            font-size: 16px; /* Tamanho do parágrafo */
+            line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 600px) {
+            .scroll-container {
+                padding: 10px; /* Menos preenchimento em dispositivos móveis */
+                height: 80vh; /* Altura reduzida em dispositivos móveis */
+            }
+
+            h1 {
+                font-size: 20px; /* Tamanho do título para dispositivos móveis */
+            }
+
+            p {
+                font-size: 14px; /* Tamanho do parágrafo para dispositivos móveis */
+            }
         }
     </style>
 </head>
@@ -56,14 +87,14 @@
         Seu navegador não suporta o vídeo de fundo.
     </video>
 
-    <!-- Conteúdo da página -->
-    <div class="content">
+    <!-- Contêiner de conteúdo com rolagem invisível -->
+    <div class="scroll-container">
         <h1>Agora Você tem uma estrela de verdade</h1>
         <p>Uma estrela na constelação de Capricórnio chamada (HD 202224) recebeu seu nome: <strong>❤️Sami</strong>. Ela brilha com uma magnitude visual de +7.23 e está a aproximadamente 610 anos-luz da Terra (tipo muito muito muito longe isso da tipo uns 9,46 trilhões de quilômetros).</p>
-        <p>ela tem uma temperatura de 4660 K é uma luminosidade 66 vezes maior que a do Sol tipo vc quando eu te vejo ate brilha, a estrela que agora tem seu nome "Sami" é um símbolo do brilho e da luz que você traz para mim .</p>
-        <p>ai vc deve ta pensando, pq esse mlék fica fazendo essas coisa. ai eu explico que é  uma coisa que eu acho legal de fazer essas coisas um pouco diferente pra pessoa que gosto, acho que vc nao gosta muito dessas coisa mas eu prefiro demonstrar pra você que eu gosto de oce❤️ .</p>
-        <p>o legal q essa estrela existe de verdade só ir no link ali embaixo e pesquisar por (HD 202224) e voce pode ver ela de verdade e ate apontar o celular pra ela pra saber onde ela esta em um angulo de 360graus e vc pode ver ela quando quiser.</p>
-        <p>Espero que goste e nao precisa fala nada se nao quise.</p>
+        <p>Ela tem uma temperatura de 4660 K e uma luminosidade 66 vezes maior que a do Sol, tipo você quando eu te vejo até brilha; a estrela que agora tem seu nome "Sami" é um símbolo do brilho e da luz que você traz para mim.</p>
+        <p>Aí você deve estar pensando, por que esse mleque fica fazendo essas coisas. Aí eu explico que é uma coisa que eu acho legal de fazer, essas coisas um pouco diferentes pra pessoa que gosto; acho que você não gosta muito dessas coisas, mas eu prefiro demonstrar pra você que eu gosto de você ❤️.</p>
+        <p>O legal é que essa estrela existe de verdade, é só ir no link ali embaixo e pesquisar por (HD 202224) e você pode ver ela de verdade e até apontar o celular pra ela pra saber onde ela está num ângulo de 360 graus.</p>
+        <p>Espero que goste e não precisa falar nada se não quiser.</p>
         <p>Para ver a estrela no céu, você pode acessar o <a href="https://stellarium-web.org/?target=21h16m30s%20-21°43'" target="_blank" style="color: #ffd700; text-decoration: none;">Stellarium Web</a>.</p>
     </div>
 </body>
