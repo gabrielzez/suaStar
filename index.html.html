@@ -32,16 +32,15 @@
 
         /* Contêiner de conteúdo */
         .scroll-container {
-            background: rgba(0, 0, 0, 0.8); /* Fundo escuro */
-            padding: 15px;
-            border-radius: 10px;
             width: 90%; /* Largura responsiva */
             height: 90vh; /* Altura total do viewport */
             overflow-y: auto; /* Rolagem vertical */
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra */
+            box-shadow: none; /* Remover sombra */
             display: flex; /* Flexbox para melhor organização */
             flex-direction: column; /* Colocar itens em coluna */
             justify-content: flex-start; /* Alinhar itens no topo */
+            position: relative; /* Permitir sobreposição */
+            background: transparent; /* Tornar o fundo transparente */
         }
 
         /* Ocultar barra de rolagem */
