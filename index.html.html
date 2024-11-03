@@ -34,11 +34,12 @@
             position: relative;
             z-index: 1;
             background: rgba(0, 0, 0, 0.5);
-            padding: 15px; /* Reduzido para ficar mais fino */
+            padding: 15px;
             border-radius: 10px;
             max-width: 400px; /* Ajustado para ficar mais estreito */
+            width: 90%; /* Para ser responsivo em telas pequenas */
             max-height: 80vh;
-            overflow-y: scroll;
+            overflow-y: auto; /* Permitir rolagem se necessário */
             text-align: center;
         }
 
@@ -53,10 +54,22 @@
         h1 {
             color: #ffd700;
             font-size: 24px; /* Reduzido */
+            margin: 0 0 10px 0; /* Para dar espaço entre o título e o conteúdo */
         }
 
         p {
             font-size: 14px; /* Reduzido */
+        }
+
+        /* Estilos para dispositivos móveis */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px; /* Título um pouco menor em dispositivos móveis */
+            }
+
+            p {
+                font-size: 12px; /* Texto um pouco menor em dispositivos móveis */
+            }
         }
     </style>
 </head>
