@@ -11,12 +11,12 @@
             width: 100%;
             height: 100%;
             display: flex;
-            flex-direction: column; /* Permitir que o conteúdo se empilhe verticalmente */
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             font-family: Arial, sans-serif;
             color: #ffffff;
-            overflow: hidden; /* Evitar rolagem no corpo */
+            overflow: hidden;
         }
 
         .background-video {
@@ -30,60 +30,54 @@
             transform: translate(-50%, -50%);
         }
 
-        /* Contêiner de conteúdo */
         .scroll-container {
-            width: 90%; /* Largura responsiva */
-            height: 90vh; /* Altura total do viewport */
-            overflow-y: auto; /* Rolagem vertical */
-            box-shadow: none; /* Remover sombra */
-            display: flex; /* Flexbox para melhor organização */
-            flex-direction: column; /* Colocar itens em coluna */
-            justify-content: flex-start; /* Alinhar itens no topo */
-            position: relative; /* Permitir sobreposição */
-            background: transparent; /* Tornar o fundo transparente */
+            width: 90%;
+            height: 90vh;
+            overflow-y: auto;
+            box-shadow: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            background: transparent !important; /* Adicionando !important */
         }
 
-        /* Ocultar barra de rolagem */
         .scroll-container::-webkit-scrollbar {
-            display: none; /* Para navegadores baseados em WebKit */
+            display: none;
         }
         .scroll-container {
-            scrollbar-width: none; /* Para Firefox */
+            scrollbar-width: none;
         }
 
         h1 {
             color: #ffd700;
-            font-size: 24px; /* Tamanho do título */
-            margin: 0 0 10px 0; /* Margem entre o título e o conteúdo */
+            font-size: 24px;
+            margin: 0 0 10px 0;
         }
 
         p {
-            font-size: 16px; /* Tamanho do parágrafo */
-            line-height: 1.5; /* Espaçamento entre linhas */
-            margin-bottom: 10px; /* Margem entre parágrafos */
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
 
-        /* Estilos para dispositivos móveis */
         @media (max-width: 600px) {
             h1 {
-                font-size: 20px; /* Tamanho do título em dispositivos móveis */
+                font-size: 20px;
             }
-
             p {
-                font-size: 14px; /* Tamanho do parágrafo em dispositivos móveis */
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Vídeo de fundo -->
     <video class="background-video" autoplay muted loop>
         <source src="dd.mp4" type="video/mp4">
         <source src="dd.webm" type="video/webm">
         Seu navegador não suporta o vídeo de fundo.
     </video>
 
-    <!-- Contêiner de conteúdo com rolagem -->
     <div class="scroll-container">
         <h1>Agora Você tem uma estrela de verdade</h1>
         <p>Uma estrela na constelação de Capricórnio chamada (HD 202224) recebeu seu nome: <strong>❤️Sami</strong>. Ela brilha com uma magnitude visual de +7.23 e está a aproximadamente 610 anos-luz da Terra (tipo muito muito muito longe isso da tipo uns 9,46 trilhões de quilômetros).</p>
