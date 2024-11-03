@@ -10,12 +10,13 @@
             padding: 0;
             width: 100%;
             height: 100%;
-            overflow: hidden; /* Ocultar rolagem do corpo */
             display: flex;
-            justify-content: center;
+            flex-direction: column; /* Permitir que o conteúdo se empilhe verticalmente */
             align-items: center;
+            justify-content: center;
             font-family: Arial, sans-serif;
             color: #ffffff;
+            overflow: hidden; /* Evitar rolagem no corpo */
         }
 
         .background-video {
@@ -31,16 +32,15 @@
 
         /* Contêiner de conteúdo */
         .scroll-container {
-            position: relative;
-            z-index: 1;
-            background: rgba(0, 0, 0, 0.8); /* Fundo mais escuro para contraste */
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 90%; /* Usar 90% da largura da tela */
-            height: 90vh; /* Definir altura para 90% da altura da tela */
-            overflow-y: scroll; /* Rolagem vertical */
-            text-align: center;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para destaque */
+            width: 90%; /* Largura responsiva */
+            height: 90vh; /* Altura total do viewport */
+            overflow-y: auto; /* Rolagem vertical */
+            box-shadow: none; /* Remover sombra */
+            display: flex; /* Flexbox para melhor organização */
+            flex-direction: column; /* Colocar itens em coluna */
+            justify-content: flex-start; /* Alinhar itens no topo */
+            position: relative; /* Permitir sobreposição */
+            background: transparent; /* Tornar o fundo transparente */
         }
 
         /* Ocultar barra de rolagem */
@@ -59,22 +59,18 @@
 
         p {
             font-size: 16px; /* Tamanho do parágrafo */
-            line-height: 1.5; /* Espaçamento entre linhas para melhor legibilidade */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            margin-bottom: 10px; /* Margem entre parágrafos */
         }
 
         /* Estilos para dispositivos móveis */
         @media (max-width: 600px) {
-            .scroll-container {
-                padding: 10px; /* Menos preenchimento em dispositivos móveis */
-                height: 80vh; /* Altura reduzida em dispositivos móveis */
-            }
-
             h1 {
-                font-size: 20px; /* Tamanho do título para dispositivos móveis */
+                font-size: 20px; /* Tamanho do título em dispositivos móveis */
             }
 
             p {
-                font-size: 14px; /* Tamanho do parágrafo para dispositivos móveis */
+                font-size: 14px; /* Tamanho do parágrafo em dispositivos móveis */
             }
         }
     </style>
@@ -87,7 +83,7 @@
         Seu navegador não suporta o vídeo de fundo.
     </video>
 
-    <!-- Contêiner de conteúdo com rolagem invisível -->
+    <!-- Contêiner de conteúdo com rolagem -->
     <div class="scroll-container">
         <h1>Agora Você tem uma estrela de verdade</h1>
         <p>Uma estrela na constelação de Capricórnio chamada (HD 202224) recebeu seu nome: <strong>❤️Sami</strong>. Ela brilha com uma magnitude visual de +7.23 e está a aproximadamente 610 anos-luz da Terra (tipo muito muito muito longe isso da tipo uns 9,46 trilhões de quilômetros).</p>
