@@ -29,19 +29,19 @@
             transform: translate(-50%, -50%);
         }
 
-        /* Contêiner de conteúdo com rolagem invisível */
+        /* Contêiner de conteúdo */
         .scroll-container {
             position: relative;
             z-index: 1;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
+            background: rgba(0, 0, 0, 0.7); /* Tornar o fundo mais opaco */
+            padding: 20px;
             border-radius: 10px;
-            max-width: 90%; /* Usar 90% para que se ajuste melhor em telas pequenas */
-            width: 400px; /* Limite da largura do contêiner */
-            height: auto; /* Permitir altura automática */
+            max-width: 90%; /* Ajustar para 90% da largura da tela */
+            height: auto; /* Permitir que a altura se ajuste ao conteúdo */
             max-height: 80vh; /* Limitar a altura máxima */
             overflow-y: auto; /* Permitir rolagem se necessário */
             text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao contêiner */
         }
 
         /* Ocultar barra de rolagem */
@@ -54,27 +54,26 @@
 
         h1 {
             color: #ffd700;
-            font-size: 24px; /* Tamanho padrão do título */
-            margin: 0 0 10px 0; /* Espaço entre o título e o conteúdo */
+            font-size: 24px; /* Tamanho do título */
+            margin: 0 0 10px 0; /* Margem entre o título e o conteúdo */
         }
 
         p {
-            font-size: 14px; /* Tamanho padrão do parágrafo */
+            font-size: 14px; /* Tamanho do parágrafo */
         }
 
         /* Estilos para dispositivos móveis */
         @media (max-width: 600px) {
             .scroll-container {
-                max-width: 95%; /* Ajustar largura em dispositivos móveis */
-                padding: 10px; /* Reduzir o preenchimento em dispositivos móveis */
+                padding: 10px; /* Menos preenchimento em dispositivos móveis */
             }
 
             h1 {
-                font-size: 20px; /* Título um pouco menor em dispositivos móveis */
+                font-size: 20px; /* Tamanho do título para dispositivos móveis */
             }
 
             p {
-                font-size: 12px; /* Texto um pouco menor em dispositivos móveis */
+                font-size: 12px; /* Tamanho do parágrafo para dispositivos móveis */
             }
         }
     </style>
